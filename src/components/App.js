@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 
-import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
+
+import "../styles/App.css";
 
 function App({ location }) {
   const { city, country } = location;

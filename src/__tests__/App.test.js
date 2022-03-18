@@ -2,8 +2,14 @@ import { render, screen } from "@testing-library/react";
 
 import App from "../components/App";
 
-test("renders weather app h1", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/weather app/i);
-  expect(linkElement).toBeInTheDocument();
+import forecast from "../data/forecast.json";
+
+describe("App", () => {
+  it("renders the App component correctly", () => {
+    render(<App location={forecast.location} />);
+
+    const h1Element = screen.getByText(/Manchester, UK/i);
+
+    expect(h1Element).toBeInTheDocument();
+  });
 });

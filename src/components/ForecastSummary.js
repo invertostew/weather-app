@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 
+import "../styles/ForecastSummary.css";
+
 function ForecastSummary({ date, icon, temperature, description }) {
   return (
-    <article className="ForecastSummary">
-      <div className="ForecastSummary__date">{date}</div>
-      <div className="ForecastSummary__icon">{icon}</div>
-      <div className="ForecastSummary__temperature">
+    <article className="forecast-summary">
+      <div className="forecast-summary__date">{date}</div>
+      <div className="forecast-summary__icon">{icon}</div>
+      <div className="forecast-summary__temperature">
         {temperature.max} &deg;C
       </div>
-      <div className="ForecastSummary__description">{description}</div>
+      <div className="forecast-summary__description">{description}</div>
     </article>
   );
 }

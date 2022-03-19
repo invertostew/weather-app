@@ -1,0 +1,10 @@
+.forecast-summaries {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.forecast-summaries * {
+  flex-grow: 1;
+}

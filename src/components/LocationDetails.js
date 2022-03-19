@@ -4,8 +4,8 @@ import "../styles/LocationDetails.css";
 
 function LocationDetails({ city, country }) {
   return (
-    <section className="LocationDetails">
-      <h1 className="LocationDetails__heading">{`${city}, ${country}`}</h1>
+    <section className="location-details">
+      <h1 className="location-details__heading">{`${city}, ${country}`}</h1>
     </section>
   );
 }

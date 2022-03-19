@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 
 import ForecastSummary from "./ForecastSummary";
 
+import "../styles/ForecastSummaries.css";
+
 function ForecastSummaries({ forecasts }) {
   return (
-    <section className="ForecastSummaries">
+    <section className="forecast-summaries">
       {forecasts.map((forecast) => (
         <ForecastSummary
           key={forecast.date}

@@ -1,0 +1,7 @@
+.forecast-summary {
+  text-align: center;
+}
+
+.forecast-summary *:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}

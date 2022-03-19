@@ -21,13 +21,13 @@ function ForecastSummaries({ forecasts }) {
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
-      date: PropTypes.number,
+      date: PropTypes.number.isRequired,
       icon: PropTypes.string.isRequired,
       temperature: PropTypes.shape({
         min: PropTypes.number,
-        max: PropTypes.number,
-      }),
-      description: PropTypes.string,
+        max: PropTypes.number.isRequired,
+      }).isRequired,
+      description: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import forecast from "./data/forecast.json";
-
 import App from "./components/App";
+
+import forecast from "./data/forecast.json";
 
 import "./styles/index.css";
 

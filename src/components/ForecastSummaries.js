@@ -4,7 +4,7 @@ import ForecastSummary from "./ForecastSummary";
 
 import "../styles/ForecastSummaries.css";
 
-function ForecastSummaries({ forecasts }) {
+function ForecastSummaries({ forecasts, handleForecastSelect }) {
   return (
     <section className="forecast-summaries">
       {forecasts.map((forecast) => (
@@ -14,6 +14,7 @@ function ForecastSummaries({ forecasts }) {
           icon={forecast.icon}
           temperature={forecast.temperature}
           description={forecast.description}
+          handleForecastSelect={handleForecastSelect}
         />
       ))}
     </section>
@@ -30,8 +31,9 @@ ForecastSummaries.propTypes = {
         max: PropTypes.number.isRequired,
       }).isRequired,
       description: PropTypes.string.isRequired,
-    })
+    }).isRequired
   ).isRequired,
+  handleForecastSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummaries;

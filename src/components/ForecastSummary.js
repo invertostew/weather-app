@@ -4,7 +4,13 @@ import moment from "moment";
 
 import "../styles/ForecastSummary.css";
 
-function ForecastSummary({ date, icon, temperature, description }) {
+function ForecastSummary({
+  date,
+  icon,
+  temperature,
+  description,
+  handleForecastSelect,
+}) {
   return (
     <article className="forecast-summary">
       <div className="forecast-summary__date">
@@ -22,6 +28,12 @@ function ForecastSummary({ date, icon, temperature, description }) {
       <div className="forecast-summary__description">
         <p>{description}</p>
       </div>
+
+      <div className="forecast-summary__more-details">
+        <button type="button" data-date={date} onClick={handleForecastSelect}>
+          More Details
+        </button>
+      </div>
     </article>
   );
 }
@@ -34,6 +46,7 @@ ForecastSummary.propTypes = {
     max: PropTypes.number.isRequired,
   }).isRequired,
   description: PropTypes.string.isRequired,
+  handleForecastSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummary;

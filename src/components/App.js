@@ -9,15 +9,22 @@ import "../styles/App.css";
 
 function App({ location, forecasts }) {
   const { city, country } = location;
-  const [selectedDate] = useState(forecasts[0].date);
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
 
+  const handleForecastSelect = (event) => {
+    setSelectedDate(parseInt(event.target.dataset.date, 10));
+  };
+
   return (
     <main className="weather-app">
       <LocationDetails city={city} country={country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        handleForecastSelect={handleForecastSelect}
+      />
       <ForecastDetails forecast={selectedForecast} />
     </main>
   );

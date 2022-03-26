@@ -1,13 +1,14 @@
 .search-form {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .search-form__input {
+  box-sizing: border-box;
   border: 2px solid #ddd;
   border-radius: 99px;
   padding: 1rem 1.5rem;
   background-color: #fff;
-  min-width: 300px;
+  width: 100%;
 }
 
 .search-form__button {
@@ -18,5 +19,22 @@
   color: #fff;
   background-color: #153253;
   cursor: pointer;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 561px) {
+  .search-form {
+    margin-top: 2.5rem;
+  }
+
+  .search-form__input {
+    max-width: 300px;
+  }
+
+  .search-form__button {
+    margin-top: 0;
+    margin-left: 1rem;
+    width: unset;
+  }
 }

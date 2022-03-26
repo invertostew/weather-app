@@ -1,10 +1,13 @@
+/* eslint-disable no-console */
+
 import axios from "axios";
 
 const getForecast = (
   searchText,
   setSelectedDate,
   setForecasts,
-  setLocation
+  setLocation,
+  setErrorMessage
 ) => {
   let endpoint = "https://mcr-codes-weather-app.herokuapp.com/forecast";
 
@@ -20,7 +23,17 @@ const getForecast = (
       setLocation(res.data.location);
     })
     .catch((err) => {
-      console.log(err);
+      const { status } = err.response;
+
+      if (status === 404) {
+        setErrorMessage("No such town or city, try again!");
+        console.error("Location is not valid", err);
+      }
+
+      if (status === 500) {
+        setErrorMessage("Oops, servererror, try again later.");
+        console.error("Server error", err);
+      }
     });
 };
 

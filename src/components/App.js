@@ -10,6 +10,7 @@ import "../styles/App.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({ city: "", country: "" });
   const [selectedDate, setSelectedDate] = useState(0);
@@ -19,7 +20,13 @@ function App() {
   );
 
   const handleCitySearch = () => {
-    getForecast(searchText, setSelectedDate, setForecasts, setLocation);
+    getForecast(
+      searchText,
+      setSelectedDate,
+      setForecasts,
+      setLocation,
+      setErrorMessage
+    );
   };
 
   const handleForecastSelect = (event) => {
@@ -27,12 +34,22 @@ function App() {
   };
 
   useEffect(() => {
-    getForecast(searchText, setSelectedDate, setForecasts, setLocation);
+    getForecast(
+      searchText,
+      setSelectedDate,
+      setForecasts,
+      setLocation,
+      setErrorMessage
+    );
   }, []);
 
   return (
     <main className="weather-app">
-      <LocationDetails city={location.city} country={location.country} />
+      <LocationDetails
+        errorMessage={errorMessage}
+        city={location.city}
+        country={location.country}
+      />
 
       <SearchForm
         searchText={searchText}
@@ -40,12 +57,16 @@ function App() {
         handleCitySearch={handleCitySearch}
       />
 
-      <ForecastSummaries
-        forecasts={forecasts}
-        handleForecastSelect={handleForecastSelect}
-      />
+      {!errorMessage && (
+        <>
+          <ForecastSummaries
+            forecasts={forecasts}
+            handleForecastSelect={handleForecastSelect}
+          />
 
-      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+        </>
+      )}
     </main>
   );
 }

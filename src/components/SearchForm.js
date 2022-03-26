@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "../styles/SearchForm.css";
+
 function SearchForm({ searchText, setSearchText, handleCitySearch }) {
   const handleInputChange = (event) => {
     setSearchText(event.target.value);
@@ -10,6 +12,7 @@ function SearchForm({ searchText, setSearchText, handleCitySearch }) {
       <input
         type="text"
         className="search-form__input"
+        placeholder="Please enter a location"
         value={searchText}
         onChange={handleInputChange}
       />

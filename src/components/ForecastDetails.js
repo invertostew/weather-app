@@ -9,23 +9,33 @@ function ForecastDetails({ forecast }) {
   return (
     <section className="forecast-details">
       <article className="forecast-details__date">
-        <p>
+        <p className="forecast-details__date__content">
           <strong>{moment(date).format("ddd Do MMM")}</strong>
         </p>
       </article>
 
       <article className="forecast-details__temperature">
-        <p>Min Temp: {temperature.min} &deg;C</p>
-        <p>Max Temp: {temperature.max} &deg;C</p>
+        <p className="forecast-details__temperature__min-temp">
+          Min Temp: {temperature.min} &deg;C
+        </p>
+        <p className="forecast-details__temperature__max-temp">
+          Max Temp: {temperature.max} &deg;C
+        </p>
       </article>
 
       <article className="forecast-details__humidity">
-        <p>Humidity: {humidity}%</p>
+        <p className="forecast-details__humidity__content">
+          Humidity: {humidity}%
+        </p>
       </article>
 
       <article className="forecast-details__wind">
-        <p>Wind Speed: {wind.speed} mph</p>
-        <p>Wind Direction: {wind.direction}</p>
+        <p className="forecast-details__wind__wind-speed">
+          Wind Speed: {wind.speed} mph
+        </p>
+        <p className="forecast-details__wind__wind-direction">
+          Wind Direction: {wind.direction}
+        </p>
       </article>
     </section>
   );

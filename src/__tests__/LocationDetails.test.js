@@ -8,6 +8,8 @@ describe("LocationDetails", () => {
       <LocationDetails city="Manchester" country="UK" />
     );
 
-    expect(getByText("Manchester, UK")).toHaveClass("LocationDetails__heading");
+    expect(getByText("Manchester, UK")).toHaveClass(
+      "location-details__heading"
+    );
   });
 });

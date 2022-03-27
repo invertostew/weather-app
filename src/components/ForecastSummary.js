@@ -12,25 +12,34 @@ function ForecastSummary({
   handleForecastSelect,
 }) {
   return (
-    <article className="forecast-summary">
+    <article className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">
-        <p>{moment(date).format("ddd Do MMM")}</p>
+        <p className="forecast-summary__date__content">
+          {moment(date).format("ddd Do MMM")}
+        </p>
       </div>
 
-      <div className="forecast-summary__icon">
+      <div className="forecast-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} />
       </div>
 
       <div className="forecast-summary__temperature">
-        <p>{temperature.max} &deg;C</p>
+        <p className="forecast-summary__temperature__content">
+          {temperature.max} &deg;C
+        </p>
       </div>
 
       <div className="forecast-summary__description">
-        <p>{description}</p>
+        <p className="forecast-summary__description__content">{description}</p>
       </div>
 
       <div className="forecast-summary__more-details">
-        <button type="button" data-date={date} onClick={handleForecastSelect}>
+        <button
+          type="button"
+          className="forecast-summary__more-details__button"
+          data-date={date}
+          onClick={handleForecastSelect}
+        >
           More Details
         </button>
       </div>

@@ -34,7 +34,13 @@ describe("SearchForm", () => {
   });
 
   it("renders the right placeholder text", () => {
-    render(<SearchForm />);
+    render(
+      <SearchForm
+        searchText={validProps.searchText}
+        setSearchText={validProps.setSearchText}
+        handleCitySearch={validProps.handleCitySearch}
+      />
+    );
 
     const inputNode = screen.getByPlaceholderText("Please enter a location");
 

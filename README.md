@@ -43,5 +43,5 @@ If you wish to run the tests for yourself, you can run `npm install` to install 
 
 This app was built with a mobile first approach.
 
-![Mobile Version](./src/__screenshots__/mobile.png)
-![Desktop Version](./src/__screenshots__/desktop.png);
+![Mobile Version](./__screenshots__/mobile.png)
+![Desktop Version](./__screenshots__/desktop.png);

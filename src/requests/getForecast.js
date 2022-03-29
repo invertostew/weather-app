@@ -21,6 +21,7 @@ const getForecast = (
       setSelectedDate(res.data.forecasts[0].date);
       setForecasts(res.data.forecasts);
       setLocation(res.data.location);
+      setErrorMessage("");
     })
     .catch((err) => {
       const { status } = err.response;

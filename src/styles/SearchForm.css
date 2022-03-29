@@ -23,7 +23,7 @@
   width: 100%;
 }
 
-@media (min-width: 561px) {
+@media (min-width: 576px) {
   .search-form {
     margin-top: 2.5rem;
   }
@@ -35,6 +35,6 @@
   .search-form__button {
     margin-top: 0;
     margin-left: 1rem;
-    width: unset;
+    width: auto;
   }
 }

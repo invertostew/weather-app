@@ -25,7 +25,7 @@
   margin-bottom: 1rem;
 }
 
-@media (min-width: 561px) {
+@media (min-width: 576px) {
   .forecast-details {
     margin-top: 5rem;
   }

@@ -40,17 +40,15 @@ describe("ForecastSummary", () => {
     );
 
     expect(getByText("Thu 1st Jan")).toHaveClass(
-      "forecast-summary__date__content"
+      "forecast-summary__content--date"
     );
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
     expect(getByText("20 °C")).toHaveClass(
-      "forecast-summary__temperature__content"
+      "forecast-summary__content--temperature"
     );
     expect(getByText("Test Description")).toHaveClass(
-      "forecast-summary__description__content"
+      "forecast-summary__content--description"
     );
-    expect(getByText("More Details")).toHaveClass(
-      "forecast-summary__more-details__button"
-    );
+    expect(getByText("More Details")).toHaveClass("forecast-summary__button");
   });
 });

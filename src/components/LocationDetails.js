@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 import "../styles/LocationDetails.css";
 
 function LocationDetails({ errorMessage, city, country }) {
-  return errorMessage ? (
+  return (
     <section className="location-details">
-      <h1 className="location-details__heading">{errorMessage}</h1>
-    </section>
-  ) : (
-    <section className="location-details">
-      <h1 className="location-details__heading">{`${city}, ${country}`}</h1>
+      <h1 className="location-details__heading">
+        {errorMessage || `${city}, ${country}`}
+      </h1>
     </section>
   );
 }

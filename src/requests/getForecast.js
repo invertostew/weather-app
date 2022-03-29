@@ -31,7 +31,7 @@ const getForecast = (
       }
 
       if (status === 500) {
-        setErrorMessage("Oops, servererror, try again later.");
+        setErrorMessage("Oops, server error, try again later.");
         console.error("Server error", err);
       }
     });

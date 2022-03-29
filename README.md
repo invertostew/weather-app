@@ -13,7 +13,7 @@ The main purpose of this project is to:
 
 ## Features
 
-Using this weather app, youare able to search for the weather in a given location, if the location doesn't exist then an error will be thrown.
+Using this weather app, you are able to search for the weather in a given location, if the location doesn't exist then an error will be thrown.
 
 ## Getting Started
 

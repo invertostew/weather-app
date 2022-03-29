@@ -3,7 +3,7 @@
   margin: 2.5rem;
 }
 
-@media (min-width: 561px) {
+@media (min-width: 576px) {
   .weather-app {
     text-align: left;
   }

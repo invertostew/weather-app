@@ -13,7 +13,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__date"
       >
         <p
-          class="forecast-summary__date__content"
+          class="forecast-summary__content forecast-summary__content--date"
         >
           Thu 1st Jan
         </p>
@@ -23,7 +23,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-sunny"
+          class="wi wi-day-sunny forecast-summary__content forecast-summary__content--icon"
           name="owm"
         />
       </div>
@@ -31,7 +31,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__temperature"
       >
         <p
-          class="forecast-summary__temperature__content"
+          class="forecast-summary__content forecast-summary__content--temperature"
         >
           20 °C
         </p>
@@ -40,7 +40,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__description"
       >
         <p
-          class="forecast-summary__description__content"
+          class="forecast-summary__content forecast-summary__content--description"
         >
           Test Description
         </p>
@@ -49,7 +49,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__more-details"
       >
         <button
-          class="forecast-summary__more-details__button"
+          class="forecast-summary__button"
           data-date="1111111"
           type="button"
         >
@@ -65,7 +65,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__date"
       >
         <p
-          class="forecast-summary__date__content"
+          class="forecast-summary__content forecast-summary__content--date"
         >
           Tue 20th Jan
         </p>
@@ -75,7 +75,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-snow"
+          class="wi wi-day-snow forecast-summary__content forecast-summary__content--icon"
           name="owm"
         />
       </div>
@@ -83,7 +83,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__temperature"
       >
         <p
-          class="forecast-summary__temperature__content"
+          class="forecast-summary__content forecast-summary__content--temperature"
         >
           20 °C
         </p>
@@ -92,7 +92,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__description"
       >
         <p
-          class="forecast-summary__description__content"
+          class="forecast-summary__content forecast-summary__content--description"
         >
           Test Description
         </p>
@@ -101,7 +101,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary__more-details"
       >
         <button
-          class="forecast-summary__more-details__button"
+          class="forecast-summary__button"
           data-date="1648376637"
           type="button"
         >
